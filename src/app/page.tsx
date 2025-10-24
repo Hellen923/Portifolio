@@ -5,15 +5,27 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.navbar a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
+    // Navbar scroll effect
+    const navbar = document.querySelector('header');
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        navbar?.classList.add('scrolled');
+      } else {
+        navbar?.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetId = link.getAttribute('href')?.substring(1);
-        const targetSection = document.getElementById(targetId || '');
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
+        const href = (anchor as HTMLAnchorElement).getAttribute('href');
+        const target = document.querySelector(href || '');
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
         }
       });
     });
@@ -48,13 +60,17 @@ export default function Home() {
         input.classList.remove('error');
       });
     });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
     <div>
       {/* Header */}
       <header className="header">
-        <a href="#home" className="logo">HELLEN <span>PORTFOLIO</span></a>
+        <a href="#home" className="logo">MY <span>PORTFOLIO</span></a>
         <nav className="navbar">
           <a href="#home">Home</a>
           <a href="#about">About</a>
@@ -69,14 +85,16 @@ export default function Home() {
       <section className="home" id="home">
         <div className="home-layout">
           <div className="home-content">
-            <h1>Hi, I'm <span>Hellen</span> 💫</h1>
+            <h1>Hi, I'm <span>Hellen</span> </h1>
             <h3>Web Developer | Creative Designer</h3>
             <p>I design and build responsive, modern websites with a focus on clean code and elegant user experiences.</p>
-            <a href="./Hellen-CV.pdf" className="btn" download>Download CV</a>
-            <a href="#contact" className="btn">Contact Me</a>
+            <div className="button-group">
+              <a href="./Hellen-CV.pdf" className="btn" download>Download CV</a>
+              <a href="#contact" className="btn">Contact Me</a>
+            </div>
           </div>
           <div className="home-img-card">
-            <Image src="/images/profile.jpg" alt="Hellen" width={300} height={300} />
+            <Image src="/images/profile.jpg" alt="Hellen" width={400} height={400} />
           </div>
         </div>
       </section>
@@ -116,22 +134,62 @@ export default function Home() {
       <section id="projects">
         <h2>Projects</h2>
         <div className="projects-grid">
-          {/* Project Card */}
+          {/* Project 1 */}
           <div className="project-card">
-            <Image src="/images/project1.png" alt="Project 1" width={350} height={200} />
+            <Image src="/images/project1.png" alt="Karibu Groceries Ltd" width={400} height={250} />
             <div className="project-info">
-              <h3>My Awesome Project</h3>
-              <p>I built this project using HTML, CSS, JavaScript, Node.js, and MongoDB. It's fully responsive and optimized for mobile.</p>
+              <h3>Karibu Groceries Ltd</h3>
+              <p>A modern e-commerce platform for grocery shopping with product catalog, cart functionality, and secure checkout process.</p>
               <div className="tech-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
+                <span>React</span>
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>Stripe</span>
                 <span>MongoDB</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/yourusername/project1" target="_blank">GitHub</a>
-                <a href="https://project1-demo.netlify.app" target="_blank">Live Demo</a>
+                <a href="https://github.com/hellen923/karibu-groceries" target="_blank">GitHub</a>
+                <a href="https://karibu-groceries.netlify.app" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 2 */}
+          <div className="project-card">
+            <Image src="/images/project2.png" alt="Litnest App" width={400} height={250} />
+            <div className="project-info">
+              <h3>Litnest App</h3>
+              <p>A productivity application for managing tasks, projects, and team collaboration with real-time updates.</p>
+              <div className="tech-tags">
+                <span>Vue.js</span>
+                <span>Firebase</span>
+                <span>SCSS</span>
+                <span>PWA</span>
+                <span>REST API</span>
+              </div>
+              <div className="project-links">
+                <a href="https://github.com/hellen923/litnest-app" target="_blank">GitHub</a>
+                <a href="https://litnest-app.netlify.app" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="project-card">
+            <Image src="/images/project3.png" alt="Blog Platform" width={400} height={250} />
+            <div className="project-info">
+              <h3>Blog Platform</h3>
+              <p>A content management system with user authentication, allowing writers to create and manage blog posts.</p>
+              <div className="tech-tags">
+                <span>Next.js</span>
+                <span>Prisma</span>
+                <span>PostgreSQL</span>
+                <span>NextAuth.js</span>
+                <span>Tailwind CSS</span>
+              </div>
+              <div className="project-links">
+                <a href="https://github.com/hellen923/blog-platform" target="_blank">GitHub</a>
+                <a href="https://blog-platform-demo.netlify.app" target="_blank">Live Demo</a>
               </div>
             </div>
           </div>
@@ -141,21 +199,57 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact">
         <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" className="btn">Send</button>
-        </form>
-        <a href="mailto:hellen@example.com" className="btn">Send me an email</a>
+        <div className="contact-container">
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="Your Name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Your Email" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea name="message" id="message" placeholder="Your Message" rows={5} required></textarea>
+            </div>
+            <button type="submit" className="btn">Send Message</button>
+          </form>
+          
+          <div className="contact-info">
+            <div className="contact-methods">
+              <div className="contact-method">
+                <i className='bx bx-envelope'></i>
+                <span>hellenkiwagama@gmail.com</span>
+              </div>
+              <div className="contact-method">
+                <i className='bx bxl-github'></i>
+                <span>github.com/hellen923</span>
+              </div>
+              <div className="contact-method">
+                <i className='bx bxl-linkedin'></i>
+                <span>linkedin.com/in/hellen-kiwagama</span>
+              </div>
+            </div>
+            <a href="mailto:hellenkiwagama@gmail.com" className="btn" style={{marginTop: '1rem'}}>
+              Send Direct Email
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
         <div className="social-icons">
-          <a href="https://github.com/yourusername" target="_blank"><i className="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i className="bx bxl-linkedin"></i></a>
-          <a href="mailto:hellen@example.com"><i className="bx bx-envelope"></i></a>
+          <a href="https://github.com/hellen923" target="_blank" rel="noopener noreferrer">
+            <i className="bx bxl-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/hellen-kiwagama-4631b3356/" target="_blank" rel="noopener noreferrer">
+            <i className="bx bxl-linkedin"></i>
+          </a>
+          <a href="mailto:hellenkiwagama@gmail.com">
+            <i className="bx bx-envelope"></i>
+          </a>
         </div>
         <ul>
           <li><a href="#services">Services</a></li>
