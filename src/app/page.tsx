@@ -78,7 +78,7 @@ export default function Home() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a href="#contact" className="gradient-btn">Hire Me</a>
+        <a href="hellenkiwagama@gmail.com" className="gradient-btn">Hire Me</a>
       </header>
 
       {/* Home Section */}
@@ -89,8 +89,8 @@ export default function Home() {
             <h3>Web Developer | Creative Designer</h3>
             <p>I design and build responsive, modern websites with a focus on clean code and elegant user experiences.</p>
             <div className="button-group">
-              <a href="./Hellen-CV.pdf" className="btn" download>Download CV</a>
-              <a href="#contact" className="btn">Contact Me</a>
+              <a href="https://eu.docworkspace.com/d/sIM6oyv25Ao2josgG?sa=601.1037" className="btn" download>Download CV</a>
+              <a href="0752536262" className="btn">Contact Me</a>
             </div>
           </div>
           <div className="home-img-card">
@@ -104,9 +104,7 @@ export default function Home() {
         <div className="about-content">
           <h2>About Me</h2>
           <p className="centered-text">
-            Hello! I'm Hellen, a passionate web developer who loves turning ideas into beautiful <span className="br">websites</span>.<br />
-            I enjoy creating clean layouts, smooth user experiences, and designs that feel welcoming.<br />
-            I believe in working with care, improving every detail, and building things that truly work for people.
+            Hello! I'm Hellen, a passionate Full Stack Developer dedicated to turning ideas into impactful digital experiences through code and creativity. I love building applications that are not only visually appealing but also scalable, efficient, and user-focused. With expertise in Python, modern frameworks, and UI/UX design, I take pride in writing clean, maintainable code that blends precision with innovation. I thrive on exploring new technologies, solving complex problems, and collaborating with others to bring projects to life. For me, every challenge is an opportunity to learn, grow, and create solutions that truly make a difference.
           </p>
         </div>
       </section>
@@ -124,8 +122,8 @@ export default function Home() {
             <p>I write clean, responsive code using HTML, CSS, and JavaScript to bring your ideas to life.</p>
           </div>
           <div className="service-card">
-            <h3><i className='bx bx-user-voice'></i> UI/UX Consulting</h3>
-            <p>I help teams build interfaces that feel natural, intuitive, and emotionally connected to users.</p>
+            <h3><i className='bx bx-user-voice'></i>Backend Development</h3>
+            <p>I build robust server-side applications and APIs using Python, Django, and Node.js to ensure data security and performance.</p>
           </div>
         </div>
       </section>
@@ -141,11 +139,11 @@ export default function Home() {
               <h3>Karibu Groceries Ltd</h3>
               <p>A modern e-commerce platform for grocery shopping with product catalog, cart functionality, and secure checkout process.</p>
               <div className="tech-tags">
-                <span>React</span>
-                <span>Next.js</span>
-                <span>TypeScript</span>
-                <span>Stripe</span>
-                <span>MongoDB</span>
+                <span>Django</span>
+                <span>Python</span>
+                <span>SQL Database</span>
+                <span>Bootstrap</span>
+
               </div>
               <div className="project-links">
                 <a href="https://github.com/hellen923/karibu-groceries" target="_blank">GitHub</a>
@@ -156,7 +154,7 @@ export default function Home() {
 
           {/* Project 2 */}
           <div className="project-card">
-            <Image src="/images/project2.png" alt="Litnest App" width={400} height={250} />
+            <Image src="/images/project1.png" alt="Litnest App" width={400} height={250} />
             <div className="project-info">
               <h3>Litnest App</h3>
               <p>A productivity application for managing tasks, projects, and team collaboration with real-time updates.</p>
@@ -176,7 +174,7 @@ export default function Home() {
 
           {/* Project 3 */}
           <div className="project-card">
-            <Image src="/images/project3.png" alt="Blog Platform" width={400} height={250} />
+            <Image src="/images/project1.png" alt="Blog Platform" width={400} height={250} />
             <div className="project-info">
               <h3>Blog Platform</h3>
               <p>A content management system with user authentication, allowing writers to create and manage blog posts.</p>
@@ -230,6 +228,10 @@ export default function Home() {
                 <i className='bx bxl-linkedin'></i>
                 <span>linkedin.com/in/hellen-kiwagama</span>
               </div>
+              <div className="contact-method">
+                <i className='bx bx-phone'></i>
+                <span>+254 752536262</span>
+              </div>
             </div>
             <a href="mailto:hellenkiwagama@gmail.com" className="btn" style={{marginTop: '1rem'}}>
               Send Direct Email
@@ -249,6 +251,9 @@ export default function Home() {
           </a>
           <a href="mailto:hellenkiwagama@gmail.com">
             <i className="bx bx-envelope"></i>
+          </a>
+          <a href="tel:+256-752536262">
+            <i className="bx bx-phone"></i>
           </a>
         </div>
         <ul>
