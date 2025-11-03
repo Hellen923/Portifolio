@@ -157,12 +157,13 @@ export default function Home() {
             <Image src="/images/project1.png" alt="Litnest App" width={400} height={250} />
             <div className="project-info">
               <h3>Litnest App</h3>
-              <p>A productivity application for managing tasks, projects, and team collaboration with real-time updates.</p>
+              <p>Litnest is a novel-reading platform providing a high-productivity, immersive experience. The backend, built with Python, handles API routing and content processing, ensuring fast and reliable access for users to read their favorite novels.</p>
               <div className="tech-tags">
-                <span>Vue.js</span>
-                <span>Firebase</span>
-                <span>SCSS</span>
+                <span>Python</span>
+                <span>Django</span>
+                <span>CSS</span>
                 <span>PWA</span>
+                <span>Tailwind</span>
                 <span>REST API</span>
               </div>
               <div className="project-links">
@@ -230,7 +231,7 @@ export default function Home() {
               </div>
               <div className="contact-method">
                 <i className='bx bx-phone'></i>
-                <span>+254 752536262</span>
+                <span>+256 752536262</span>
               </div>
             </div>
             <a href="mailto:hellenkiwagama@gmail.com" className="btn" style={{marginTop: '1rem'}}>
