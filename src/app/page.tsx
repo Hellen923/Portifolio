@@ -134,7 +134,7 @@ export default function Home() {
         <div className="projects-grid">
           {/* Project 1 */}
           <div className="project-card">
-            <Image src="/images/project1.png" alt="Karibu Groceries Ltd" width={400} height={250} />
+            <Image src="/images/project.png" alt="Karibu Groceries Ltd" width={400} height={250} />
             <div className="project-info">
               <h3>Karibu Groceries Ltd</h3>
               <p>A modern e-commerce platform for grocery shopping with product catalog, cart functionality, and secure checkout process.</p>
