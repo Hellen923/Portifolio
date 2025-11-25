@@ -167,7 +167,7 @@ export default function Home() {
                 <span>REST API</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/hellen923/litnest-app" target="_blank">GitHub</a>
+                <a href="https://github.com/Hellen923/litnest" target="_blank">GitHub</a>
                 <a href="https://litnest-app.netlify.app" target="_blank">Live Demo</a>
               </div>
             </div>
