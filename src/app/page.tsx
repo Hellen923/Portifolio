@@ -89,7 +89,7 @@ export default function Home() {
             <h3>Web Developer | Creative Designer</h3>
             <p>I design and build responsive, modern websites with a focus on clean code and elegant user experiences.</p>
             <div className="button-group">
-              <a href="https://eu.docworkspace.com/d/sICCoyv25Apiay8gG?sa=601.1037" className="btn" download>Download CV</a>
+              <a href="https://docs.google.com/document/d/1P4J37ybAZxvUyuv95fZ0tVnOztIIf_9eKtP_uXW2kBE/edit?tab=t.0" className="btn" target="_blank">View CV</a>
               <a href="0752536262" className="btn">Contact Me</a>
             </div>
           </div>
