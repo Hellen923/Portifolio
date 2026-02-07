@@ -125,7 +125,7 @@ export default function Home() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a href="#contact" className="gradient-btn">Hire Me</a>
+        <a href="hellenkiwagama@gmail.com" className="gradient-btn">Hire Me</a>
       </header>
 
       {/* Home Section */}
@@ -141,6 +141,8 @@ export default function Home() {
               <span>Available for hire</span>
             </div>
             <div className="button-group">
+              <a href="https://docs.google.com/document/d/1P4J37ybAZxvUyuv95fZ0tVnOztIIf_9eKtP_uXW2kBE/edit?tab=t.0" className="btn" target="_blank">View CV</a>
+              <a href="0752536262" className="btn">Contact Me</a>
               <a href="./Hellen-CV.pdf" className="btn" download>View CV</a>
               <a href="#contact" className="btn">Contact Me</a>
             </div>
@@ -186,8 +188,8 @@ export default function Home() {
             <p>I write clean, responsive code using HTML, CSS, and JavaScript to bring your ideas to life.</p>
           </div>
           <div className="service-card">
-            <h3><i className='bx bx-user-voice'></i> UI/UX Consulting</h3>
-            <p>I help teams build interfaces that feel natural, intuitive, and emotionally connected to users.</p>
+            <h3><i className='bx bx-user-voice'></i>Backend Development</h3>
+            <p>I build robust server-side applications and APIs using Python, Django, and Node.js to ensure data security and performance.</p>
           </div>
         </div>
       </section>
@@ -198,6 +200,7 @@ export default function Home() {
         <div className="projects-grid">
           {/* Swan Air - First Project */}
           <div className="project-card">
+            <Image src="/images/project.png" alt="Karibu Groceries Ltd" width={400} height={250} />
             <div className="project-image-container">
               <Image src="/images/Swanair.png" alt="Swan Air" width={400} height={250} />
               <div className="project-overlay">
@@ -208,6 +211,11 @@ export default function Home() {
               <h3>Swan Air</h3>
               <p>A flight booking and management platform for domestic and international travel reservations.</p>
               <div className="tech-tags">
+                <span>Django</span>
+                <span>Python</span>
+                <span>SQL Database</span>
+                <span>Bootstrap</span>
+
                 <span>React</span>
                 <span>Node.js</span>
                 <span>Nest.js</span>
@@ -223,6 +231,7 @@ export default function Home() {
 
           {/* Project 2 */}
           <div className="project-card">
+            <Image src="/images/project1.png" alt="Litnest App" width={400} height={250} />
             <div className="project-image-container">
               <Image src="/images/Litnest.png" alt="Litnest App" width={400} height={250} />
               <div className="project-overlay">
@@ -231,14 +240,21 @@ export default function Home() {
             </div>
             <div className="project-info">
               <h3>Litnest App</h3>
-              <p>A productivity application for managing tasks, projects, and team collaboration with real-time updates.</p>
+              <p>Litnest is a novel-reading platform providing a high-productivity, immersive experience. The backend, built with Python, handles API routing and content processing, ensuring fast and reliable access for users to read their favorite novels.</p>
               <div className="tech-tags">
+                <span>Python</span>
+                <span>Django</span>
+                <span>CSS</span>
+                <span>PWA</span>
+                <span>Tailwind</span>
                 <span>Python</span>
                 <span>Django</span>
                 <span>SQLite</span>
                 <span>REST API</span>
               </div>
               <div className="project-links">
+                <a href="https://github.com/Hellen923/litnest" target="_blank">GitHub</a>
+                <a href="https://litnest-app.netlify.app" target="_blank">Live Demo</a>
                 <a href="https://github.com/hellen923/litnest-app" target="_blank"><i className='bx bxl-github'></i> Code</a>
                 <a href="https://litnest-app.netlify.app" target="_blank"><i className='bx bx-external'></i> Demo</a>
               </div>
@@ -247,6 +263,7 @@ export default function Home() {
 
           {/* Project 3 */}
           <div className="project-card">
+            <Image src="/images/project1.png" alt="Blog Platform" width={400} height={250} />
             <div className="project-image-container">
               <Image src="/images/Linest.png" alt="Polling Platform" width={400} height={250} />
               <div className="project-overlay">
@@ -330,6 +347,10 @@ export default function Home() {
                 <i className='bx bxl-linkedin'></i>
                 <span>linkedin.com/in/hellen-kiwagama</span>
               </div>
+              <div className="contact-method">
+                <i className='bx bx-phone'></i>
+                <span>+256 752536262</span>
+              </div>
             </div>
             <a href="mailto:hellenkiwagama@gmail.com" className="btn" style={{marginTop: '1rem'}}>
               Send Direct Email
@@ -349,6 +370,9 @@ export default function Home() {
           </a>
           <a href="mailto:hellenkiwagama@gmail.com">
             <i className="bx bx-envelope"></i>
+          </a>
+          <a href="tel:+256-752536262">
+            <i className="bx bx-phone"></i>
           </a>
         </div>
         <ul>
