@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [text, setText] = useState('');
-  const fullText = "Building clean, scalable web applications";
+  const fullText = "Full Stack Developer dedicated to turning ideas into impactful digital experiences through code and creativity.";
   
   useEffect(() => {
     let index = 0;
@@ -16,7 +16,7 @@ export default function Home() {
       } else {
         clearInterval(timer);
       }
-    }, 50);
+    }, 40);
     
     return () => clearInterval(timer);
   }, []);
@@ -121,11 +121,11 @@ export default function Home() {
         <nav className="navbar">
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#services">Services</a>
+          <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a href="hellenkiwagama@gmail.com" className="gradient-btn">Hire Me</a>
+        <a href="mailto:hellenkiwagama@gmail.com" className="gradient-btn">Hire Me</a>
       </header>
 
       {/* Home Section */}
@@ -136,14 +136,9 @@ export default function Home() {
             <h3 className="typing-text">
               {text}<span className="typing-cursor">|</span>
             </h3>
-            <div className="status-indicator">
-              <span className="status-dot"></span>
-              <span>Available for hire</span>
-            </div>
+            
             <div className="button-group">
               <a href="https://docs.google.com/document/d/1P4J37ybAZxvUyuv95fZ0tVnOztIIf_9eKtP_uXW2kBE/edit?tab=t.0" className="btn" target="_blank">View CV</a>
-              <a href="0752536262" className="btn">Contact Me</a>
-              <a href="./Hellen-CV.pdf" className="btn" download>View CV</a>
               <a href="#contact" className="btn">Contact Me</a>
             </div>
           </div>
@@ -155,41 +150,95 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about">
-        <div className="about-content">
-          <h2>About Me</h2>
-          <div className="terminal-window">
-            <div className="terminal-header">
-              <span className="terminal-dot red"></span>
-              <span className="terminal-dot yellow"></span>
-              <span className="terminal-dot green"></span>
-              <span className="terminal-title">~/about-me</span>
-            </div>
-            <div className="terminal-body">
-              <p><span className="terminal-prompt">&gt;</span> Hello! I'm Hellen, a passionate <span className="highlight">web developer</span></p>
-              <p><span className="terminal-prompt">&gt;</span> I love turning ideas into beautiful <span className="highlight">websites</span></p>
-              <p><span className="terminal-prompt">&gt;</span> I enjoy creating clean layouts and smooth <span className="highlight">user experiences</span></p>
-              <p><span className="terminal-prompt">&gt;</span> Currently working with: <span className="tech-highlight">React, Next.js, TypeScript</span></p>
-              <p><span className="terminal-blink">_</span></p>
-            </div>
+        <h2>About Me</h2>
+        <div className="about-layout">
+          <div className="about-text">
+            <p>
+              Hello! I'm Hellen, a passionate Full Stack Developer dedicated to turning ideas into impactful digital experiences through code and creativity. I love building applications that are not only visually appealing but also scalable, efficient, and user-focused.
+            </p>
+            <p>
+              With expertise in Python, modern frameworks, and UI/UX design, I take pride in writing clean, maintainable code that blends precision with innovation. I thrive on exploring new technologies, solving complex problems, and collaborating with others to bring projects to life. For me, every challenge is an opportunity to learn, grow, and create solutions that truly make a difference.
+            </p>
+          </div>
+          <div className="about-card">
+            <h4>What I Do</h4>
+            <ul className="focus-list">
+              <li><i className='bx bx-code-alt'></i> Full-Stack Development</li>
+              <li><i className='bx bx-mobile-alt'></i> Mobile App Development</li>
+              <li><i className='bx bx-paint'></i> UI/UX Design</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services">
-        <h2>Services</h2>
-        <div className="services-grid">
-          <div className="service-card">
-            <h3><i className='bx bx-paint'></i> Web Design</h3>
-            <p>I create glowing, modern designs that guide users with ease and make your brand stand out.</p>
-          </div>
-          <div className="service-card">
+      {/* Skills & Technologies Section */}
+      <section id="skills">
+        <h2>Skills & Technologies</h2>
+        <div className="skills-container">
+          {/* Frontend Development */}
+          <div className="skill-category">
             <h3><i className='bx bx-code-alt'></i> Frontend Development</h3>
-            <p>I write clean, responsive code using HTML, CSS, and JavaScript to bring your ideas to life.</p>
+            <div className="skill-tags">
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Next.js</span>
+              <span>Vue.js</span>
+              <span>TypeScript</span>
+              <span>HTML5</span>
+              <span>CSS3/SASS</span>
+              <span>Bootstrap</span>
+              <span>Tailwind CSS</span>
+            </div>
           </div>
-          <div className="service-card">
-            <h3><i className='bx bx-user-voice'></i>Backend Development</h3>
-            <p>I build robust server-side applications and APIs using Python, Django, and Node.js to ensure data security and performance.</p>
+
+          {/* Backend Development */}
+          <div className="skill-category">
+            <h3><i className='bx bx-server'></i> Backend Development</h3>
+            <div className="skill-tags">
+              <span>Node.js</span>
+              <span>Python</span>
+              <span>REST APIs</span>
+            </div>
+          </div>
+
+          {/* Mobile Development */}
+          <div className="skill-category">
+            <h3><i className='bx bx-mobile-alt'></i> Mobile Development</h3>
+            <div className="skill-tags">
+              <span>React Native</span>
+            </div>
+          </div>
+
+          {/* Databases */}
+          <div className="skill-category">
+            <h3><i className='bx bx-data'></i> Databases</h3>
+            <div className="skill-tags">
+              <span>MongoDB</span>
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+
+          {/* Design & UX */}
+          <div className="skill-category">
+            <h3><i className='bx bx-paint'></i> Design & UX</h3>
+            <div className="skill-tags">
+              <span>Figma</span>
+              <span>Visily</span>
+              <span>Wireframing</span>
+              <span>Prototyping</span>
+            </div>
+          </div>
+
+          {/* Tools & Others */}
+          <div className="skill-category">
+            <h3><i className='bx bx-wrench'></i> Tools & Others</h3>
+            <div className="skill-tags">
+              <span>Git</span>
+              <span>Docker</span>
+              <span>AWS</span>
+              <span>Postman</span>
+            </div>
           </div>
         </div>
       </section>
@@ -200,7 +249,6 @@ export default function Home() {
         <div className="projects-grid">
           {/* Swan Air - First Project */}
           <div className="project-card">
-            <Image src="/images/project.png" alt="Karibu Groceries Ltd" width={400} height={250} />
             <div className="project-image-container">
               <Image src="/images/Swanair.png" alt="Swan Air" width={400} height={250} />
               <div className="project-overlay">
@@ -211,15 +259,10 @@ export default function Home() {
               <h3>Swan Air</h3>
               <p>A flight booking and management platform for domestic and international travel reservations.</p>
               <div className="tech-tags">
-                <span>Django</span>
-                <span>Python</span>
-                <span>SQL Database</span>
-                <span>Bootstrap</span>
-
                 <span>React</span>
                 <span>Node.js</span>
                 <span>Nest.js</span>
-                <span>Postgress</span>
+                <span>PostgreSQL</span>
                 <span>TypeScript</span>
               </div>
               <div className="project-links">
@@ -231,7 +274,6 @@ export default function Home() {
 
           {/* Project 2 */}
           <div className="project-card">
-            <Image src="/images/project1.png" alt="Litnest App" width={400} height={250} />
             <div className="project-image-container">
               <Image src="/images/Litnest.png" alt="Litnest App" width={400} height={250} />
               <div className="project-overlay">
@@ -240,22 +282,16 @@ export default function Home() {
             </div>
             <div className="project-info">
               <h3>Litnest App</h3>
-              <p>Litnest is a novel-reading platform providing a high-productivity, immersive experience. The backend, built with Python, handles API routing and content processing, ensuring fast and reliable access for users to read their favorite novels.</p>
+              <p>Litnest is a novel-reading platform providing a high-productivity, immersive experience with Python/Django backend.</p>
               <div className="tech-tags">
-                <span>Python</span>
-                <span>Django</span>
-                <span>CSS</span>
-                <span>PWA</span>
-                <span>Tailwind</span>
                 <span>Python</span>
                 <span>Django</span>
                 <span>SQLite</span>
                 <span>REST API</span>
+                <span>Tailwind</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/Hellen923/litnest" target="_blank">GitHub</a>
-                <a href="https://litnest-app.netlify.app" target="_blank">Live Demo</a>
-                <a href="https://github.com/hellen923/litnest-app" target="_blank"><i className='bx bxl-github'></i> Code</a>
+                <a href="https://github.com/Hellen923/litnest" target="_blank"><i className='bx bxl-github'></i> Code</a>
                 <a href="https://litnest-app.netlify.app" target="_blank"><i className='bx bx-external'></i> Demo</a>
               </div>
             </div>
@@ -263,7 +299,6 @@ export default function Home() {
 
           {/* Project 3 */}
           <div className="project-card">
-            <Image src="/images/project1.png" alt="Blog Platform" width={400} height={250} />
             <div className="project-image-container">
               <Image src="/images/Linest.png" alt="Polling Platform" width={400} height={250} />
               <div className="project-overlay">
@@ -297,7 +332,7 @@ export default function Home() {
             </div>
             <div className="project-info">
               <h3>Karibu Groceries Ltd</h3>
-              <p>A modern e-commerce platform for grocery shopping with product catalog, cart functionality, and secure checkout process.</p>
+              <p>A modern e-commerce platform for grocery shopping with product catalog, cart functionality, and secure checkout.</p>
               <div className="tech-tags">
                 <span>Python</span>
                 <span>Django</span>
@@ -376,7 +411,7 @@ export default function Home() {
           </a>
         </div>
         <ul>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
