@@ -89,7 +89,7 @@ export default function Home() {
             <h3>Web Developer | Creative Designer</h3>
             <p>I design and build responsive, modern websites with a focus on clean code and elegant user experiences.</p>
             <div className="button-group">
-              <a href="https://docs.google.com/document/d/1P4J37ybAZxvUyuv95fZ0tVnOztIIf_9eKtP_uXW2kBE/edit?tab=t.0" className="btn" target="_blank">View CV</a>
+              <a href="https://eu.docworkspace.com/d/sIM6oyv25Ao2josgG?sa=601.1037" className="btn" download>Download CV</a>
               <a href="0752536262" className="btn">Contact Me</a>
             </div>
           </div>
@@ -104,7 +104,8 @@ export default function Home() {
         <div className="about-content">
           <h2>About Me</h2>
           <p className="centered-text">
-            Hello! I'm Hellen, a passionate Full Stack Developer dedicated to turning ideas into impactful digital experiences through code and creativity. I love building applications that are not only visually appealing but also scalable, efficient, and user-focused. With expertise in Python, modern frameworks, and UI/UX design, I take pride in writing clean, maintainable code that blends precision with innovation. I thrive on exploring new technologies, solving complex problems, and collaborating with others to bring projects to life. For me, every challenge is an opportunity to learn, grow, and create solutions that truly make a difference.
+            Hello! I'm Hellen, a passionate Full Stack Developer dedicated to turning ideas into impactful digital experiences through code and creativity.<br> I love building applications that are not only visually appealing but also scalable, efficient, and user-focused. With expertise in Python, modern frameworks, and UI/UX design,</br>
+            I take pride in writing clean, maintainable code that blends precision with innovation. I thrive on exploring new technologies, solving complex problems,and collaborating with others to bring projects to life. <p>For me, every challenge is an opportunity to learn, grow, and create solutions that truly make a difference.</p>
           </p>
         </div>
       </section>
@@ -123,7 +124,7 @@ export default function Home() {
           </div>
           <div className="service-card">
             <h3><i className='bx bx-user-voice'></i>Backend Development</h3>
-            <p>I build robust server-side applications and APIs using Python, Django, and Node.js to ensure data security and performance.</p>
+            <p>I write </p>
           </div>
         </div>
       </section>
@@ -134,7 +135,7 @@ export default function Home() {
         <div className="projects-grid">
           {/* Project 1 */}
           <div className="project-card">
-            <Image src="/images/project.png" alt="Karibu Groceries Ltd" width={400} height={250} />
+            <Image src="./images/project.png" alt="Karibu Groceries Ltd" width={400} height={250} />
             <div className="project-info">
               <h3>Karibu Groceries Ltd</h3>
               <p>A modern e-commerce platform for grocery shopping with product catalog, cart functionality, and secure checkout process.</p>
@@ -154,20 +155,19 @@ export default function Home() {
 
           {/* Project 2 */}
           <div className="project-card">
-            <Image src="/images/project1.png" alt="Litnest App" width={400} height={250} />
+            <Image src="./images/project2.png" alt="Litnest App" width={400} height={250} />
             <div className="project-info">
               <h3>Litnest App</h3>
-              <p>Litnest is a novel-reading platform providing a high-productivity, immersive experience. The backend, built with Python, handles API routing and content processing, ensuring fast and reliable access for users to read their favorite novels.</p>
+              <p>A productivity application for managing tasks, projects, and team collaboration with real-time updates.</p>
               <div className="tech-tags">
-                <span>Python</span>
-                <span>Django</span>
-                <span>CSS</span>
+                <span>Vue.js</span>
+                <span>Firebase</span>
+                <span>SCSS</span>
                 <span>PWA</span>
-                <span>Tailwind</span>
                 <span>REST API</span>
               </div>
               <div className="project-links">
-                <a href="https://github.com/Hellen923/litnest" target="_blank">GitHub</a>
+                <a href="https://github.com/hellen923/litnest-app" target="_blank">GitHub</a>
                 <a href="https://litnest-app.netlify.app" target="_blank">Live Demo</a>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Home() {
 
           {/* Project 3 */}
           <div className="project-card">
-            <Image src="/images/project1.png" alt="Blog Platform" width={400} height={250} />
+            <Image src="/images/project3.png" alt="Blog Platform" width={400} height={250} />
             <div className="project-info">
               <h3>Blog Platform</h3>
               <p>A content management system with user authentication, allowing writers to create and manage blog posts.</p>
