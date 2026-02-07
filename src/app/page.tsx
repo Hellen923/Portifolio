@@ -352,44 +352,47 @@ export default function Home() {
       <section id="contact">
         <h2>Contact Me</h2>
         <div className="contact-container">
-          <form action="https://formspree.io/f/your-form-id" method="POST">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" placeholder="Your Name" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Your Email" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" placeholder="Your Message" rows={5} required></textarea>
-            </div>
-            <button type="submit" className="btn">Send Message</button>
-          </form>
+          <div className="contact-card">
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Your Email" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea name="message" id="message" placeholder="Your Message" rows={5} required></textarea>
+              </div>
+              <button type="submit" className="btn">Send Message</button>
+            </form>
+          </div>
           
           <div className="contact-info">
             <div className="contact-methods">
-              <div className="contact-method">
+              <a href="mailto:hellenkiwagama@gmail.com" className="contact-method">
                 <i className='bx bx-envelope'></i>
                 <span>hellenkiwagama@gmail.com</span>
-              </div>
-              <div className="contact-method">
+              </a>
+              <a href="https://github.com/hellen923" target="_blank" className="contact-method">
                 <i className='bx bxl-github'></i>
                 <span>github.com/hellen923</span>
-              </div>
-              <div className="contact-method">
+              </a>
+              <a href="https://www.linkedin.com/in/hellen-kiwagama-4631b3356/" target="_blank" className="contact-method">
                 <i className='bx bxl-linkedin'></i>
                 <span>linkedin.com/in/hellen-kiwagama</span>
-              </div>
-              <div className="contact-method">
+              </a>
+              <a href="tel:+256752536262" className="contact-method">
                 <i className='bx bx-phone'></i>
                 <span>+256 752536262</span>
-              </div>
+              </a>
+              <a href="https://wa.me/256752536262" target="_blank" className="contact-method whatsapp-btn">
+                <i className='bx bxl-whatsapp'></i>
+                <span>Chat on WhatsApp</span>
+              </a>
             </div>
-            <a href="mailto:hellenkiwagama@gmail.com" className="btn" style={{marginTop: '1rem'}}>
-              Send Direct Email
-            </a>
           </div>
         </div>
       </section>
