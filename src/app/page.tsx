@@ -48,7 +48,7 @@ export default function Home() {
     });
 
     // Form validation
-    const form = document.querySelector('form');
+    const form = document.querySelector('form[name="contact"]');
     if (form) {
       form.addEventListener('submit', (e) => {
         const inputs = form.querySelectorAll('input, textarea');
@@ -353,7 +353,8 @@ export default function Home() {
         <h2>Contact Me</h2>
         <div className="contact-container">
           <div className="contact-card">
-            <form action="https://formspree.io/f/your-form-id" method="POST">
+            <form name="contact" method="POST" data-netlify="true" action="/success">
+              <input type="hidden" name="form-name" value="contact" />
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Your Name" required />
