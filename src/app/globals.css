@@ -375,8 +375,8 @@ section h2 {
 }
 
 .skill-tags span {
-  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
-  color: #0fa3b1;
+  background: var(--primary-gradient);
+  color: white;
   padding: 0.4rem 0.9rem;
   border-radius: 20px;
   font-size: 0.85rem;
