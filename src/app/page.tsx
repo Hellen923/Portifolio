@@ -265,10 +265,6 @@ export default function Home() {
                 <span>PostgreSQL</span>
                 <span>TypeScript</span>
               </div>
-              <div className="project-links">
-                <a href="https://github.com/hellen923/swan-air" target="_blank"><i className='bx bxl-github'></i> Code</a>
-                <a href="https://swan-air.netlify.app" target="_blank"><i className='bx bx-external'></i> Demo</a>
-              </div>
             </div>
           </div>
 
@@ -289,10 +285,6 @@ export default function Home() {
                 <span>SQLite</span>
                 <span>REST API</span>
                 <span>Tailwind</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/Hellen923/litnest" target="_blank"><i className='bx bxl-github'></i> Code</a>
-                <a href="https://litnest-app.netlify.app" target="_blank"><i className='bx bx-external'></i> Demo</a>
               </div>
             </div>
           </div>
@@ -315,10 +307,6 @@ export default function Home() {
                 <span>NextAuth.js</span>
                 <span>Tailwind CSS</span>
               </div>
-              <div className="project-links">
-                <a href="https://github.com/hellen923/blog-platform" target="_blank"><i className='bx bxl-github'></i> Code</a>
-                <a href="https://blog-platform-demo.netlify.app" target="_blank"><i className='bx bx-external'></i> Demo</a>
-              </div>
             </div>
           </div>
 
@@ -338,10 +326,6 @@ export default function Home() {
                 <span>Django</span>
                 <span>SQLite</span>
                 <span>Tailwind CSS</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/hellen923/karibu-groceries" target="_blank"><i className='bx bxl-github'></i> Code</a>
-                <a href="https://karibu-groceries.netlify.app" target="_blank"><i className='bx bx-external'></i> Demo</a>
               </div>
             </div>
           </div>
