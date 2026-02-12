@@ -23,6 +23,35 @@ export default function Success() {
         <p style={{ fontSize: '1.2rem', marginBottom: '2rem', opacity: 0.9 }}>
           Your message has been sent successfully. I'll get back to you as soon as possible.
         </p>
+        
+        {/* Bouncing Hearts Animation */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '8px',
+          marginBottom: '2rem'
+        }}>
+          <style>{`
+            @keyframes bounce {
+              0%, 100% { transform: translateY(0); }
+              50% { transform: translateY(-15px); }
+            }
+            .heart {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background: white;
+              clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 50% 75%, 18% 100%, 0% 35%);
+            }
+            .heart-1 { animation: bounce 0.6s ease-in-out infinite; }
+            .heart-2 { animation: bounce 0.6s ease-in-out 0.2s infinite; }
+            .heart-3 { animation: bounce 0.6s ease-in-out 0.4s infinite; }
+          `}</style>
+          <div className="heart heart-1" style={{ background: 'white' }}></div>
+          <div className="heart heart-2" style={{ background: 'white' }}></div>
+          <div className="heart heart-3" style={{ background: 'white' }}></div>
+        </div>
+        
         <a href="/" style={{
           display: 'inline-block',
           background: 'white',
