@@ -292,7 +292,7 @@ export default function Home() {
           {/* Project 3 */}
           <div className="project-card">
             <div className="project-image-container">
-              <Image src="/images/Linest.png" alt="Polling Platform" width={400} height={250} />
+              <Image src="/images/polling.png" alt="Polling Platform" width={400} height={250} />
               <div className="project-overlay">
                 <span className="project-code">{"{ 03 }"}</span>
               </div>
